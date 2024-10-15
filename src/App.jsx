@@ -37,7 +37,7 @@ function filterStays() {
 
 
   useEffect(() => {
-    axios.get("/public/api/stays.json").then((rs) => setStays(rs.data));
+    axios.get("/api/stays.json").then((rs) => setStays(rs.data));
   }, []);
 
   function toggleModal() {
