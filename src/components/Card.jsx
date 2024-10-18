@@ -15,7 +15,7 @@ export default function Card({stay}) {
                     <label htmlFor="" className=" flex flex-row w-2/4 mt-2 text-sm ">&nbsp;&nbsp;{type}. {beds} beds
                     </label><label className=" flex flex-row w-1/4 mt-2 item-center justify-end mr-1"><img src="/public/Star.png" className=" w-5 h-4 mt-1"/> {rating}</label>
                   </div>
-                  <label htmlFor="" className="md:text-lg text-sm mt-4">{title}</label>
+                  <label htmlFor="" className="md:text-base text-xm mt-4">{title}</label>
               </figure>
             </div>               
   )

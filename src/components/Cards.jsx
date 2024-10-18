@@ -1,28 +1,12 @@
 import React,{useContext, useState} from 'react'
 import Card from './Card'
-import { DataContext } from '../contexts/UseProvider'
+
 
 let showCity="Whole, Finland"
 let showInvitados = "Add guests"
-let city=""
 
-export default function Cards({openModal, stays, onSearch}) {
-   const [filterOption, setFilterOption]=useState('')
-    const valores=useContext(DataContext)
-    console.log("valor es: " + valores[0])
-    
-    valores[0].trim()!==""? showCity=valores[0].split("/",1):showCity="Whole, Finland"
-    valores[0].trim()!=="" ? showInvitados=valores[0].substring(valores[0].search('/')+1,valores[0].length):showInvitados = "Add guests"
-    
 
-    function filterStays() {
-      if (city!=="" && city!=="Whole")
-        { console.log("cuidad es:  " + city)
-          return stays.filter(st=>st.city===city) 
-        }
-        else
-          { return stays}
-      }
+export default function Cards({openModal, stays}) {
 
 
   return (
@@ -77,7 +61,7 @@ export default function Cards({openModal, stays, onSearch}) {
       </div>
 
       <div className=" h-5/6 w-full grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-2 justify-center items-center">
-                { filterStays(filterOption).map((stay,i)=>
+                { stays.map((stay,i)=>
                 < Card
                   key={i}
                   stay={stay}
