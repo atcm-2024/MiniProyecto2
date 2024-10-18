@@ -6,11 +6,11 @@ export default function Modal({ open, closeModal, onSearch }) {
     const [locacion, SetLocation] = useState('Whole, Finland');
 
     function handleBusqueda() {
-        const datitos = {
+        const datas = {
             cityCountry: locacion,
             maxGuests: counterA + counterC
         };
-        onSearch(datitos);
+        onSearch(datas);
         closeModal();
     }
 
