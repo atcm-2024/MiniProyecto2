@@ -20,7 +20,3 @@ export default function Card({stay}) {
             </div>               
   )
 }
-
-/*md:justify-center md:items-center grid md:grid-cols-3 sm:grid-cols-2 md:w-screen*/
-
-/*"w-full bg-orange-700 ml-10 mr-10 flex flex-row*/

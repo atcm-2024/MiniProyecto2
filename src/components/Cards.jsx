@@ -1,13 +1,10 @@
 import React,{useContext, useState} from 'react'
 import Card from './Card'
 
-
 let showCity="Whole, Finland"
 let showInvitados = "Add guests"
 
-
 export default function Cards({openModal, stays}) {
-
 
   return (
     <div className="w-screen h-screen mt-5 ml-5 mr-10 ">
